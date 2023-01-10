@@ -1,0 +1,95 @@
+---
+title: "Passey model report"
+author: "Sarah Pederzani"
+output: html_document
+params:
+  project: Axlor
+  tooth: toothname
+  date: !r Sys.Date()
+  Emeasparams: list
+  Edist: vector
+  mSolvparams: list
+  DPE: vector
+  
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+### Model Information
+
+Project: `r params$project`
+
+Tooth ID: `r params$tooth`
+
+Model run date: `r params$date`
+
+### Emeas
+
+Emeas input parameters:
+
+```{r emeasin}
+print(params$Emeasparams)
+```
+
+notes:
+
+numtrials - number of trials to run iteration  
+numsam - number of isotope samples/values  
+r1 - (real) isotope 1 sigma reproducibility  
+r2 - (integer) sample length 1 sigma reproducibility (in mm * 10)  
+r3 - (integer) sample depth 1-sigma reproducibility (in mm * 10)  
+la - (integer) length of apposition (in mm * 10)  
+
+Emeas output:
+
+```{r emeasout}
+
+hist(params$Edist)
+
+
+```
+
+mean(E~meas~) = `r round(mean(params$Edist),2)`
+
+note: Edist is a vector of estimated measurement error (E~meas~) for each trial
+
+### mSolv
+
+mSolv input parameters:
+
+```{r mSolvin}
+print(params$mSolvparams)
+```
+
+notes:
+
+nsolxns - number of solutions to be computed  
+openindx - degree of openendedness, less than lm, openended (profile mature) --> index = 1; close ended (enamel immature) index = lm  
+lm - length of maturation  
+la - (integer) length of apposition (in mm * 10)  
+finit - volumetric fraction of mineral in immature enamel compared to mature enamel  
+maxlength - maximum sampling length  
+minlength - minimum sampling length (must be > 2)  
+mindepth - minumum sampling depth  
+r1 - (real) isotope 1 sigma reproducibility  
+r2 - (integer) sample length 1 sigma reproducibility (in mm * 10)  
+r3 - (integer) sample depth 1-sigma reproducibility (in mm * 10)  
+maxratio - max value of the generated reference vector (choose close to average of actual isotope value)  
+minratio - min value of the generated reference vector (choose close to average of actual isotope value)  
+stdev - sd for random draws that produce reference vector  
+df - damping factor. Needs to be chosen to minimize difference between the estimated measurement error (E~meas~) and the prediction error (E~pred~)
+
+```{r mSolvout}
+
+hist(params$DPE)
+
+
+```
+
+mean(E~pred~) = `r round(mean(params$DPE),2)`
+
+note: DPE is a vector of prediction error (E~pred~) for each trial. It should be close to E~meas~
+
+
