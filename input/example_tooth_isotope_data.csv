@@ -1,0 +1,17 @@
+tooth_ID,sample_ID,layer,taxon,dist_ERJ,sample_length,sample_depth,mean_d18O,SD_d18O
+tooth1,tooth1.A,A,Bos/Bison,48.9,3.4,0.6,17.3,0.1
+tooth1,tooth1.B,A,Bos/Bison,45.5,3.6,0.6,16.5,0.3
+tooth1,tooth1.C,A,Bos/Bison,41.9,3.0,0.6,16.6,0.1
+tooth1,tooth1.D,A,Bos/Bison,38.9,2.8,0.7,16.2,0.1
+tooth1,tooth1.E,A,Bos/Bison,36.1,3.1,0.6,15.5,0.2
+tooth1,tooth1.F,A,Bos/Bison,33.0,2.9,0.6,15.1,0.5
+tooth1,tooth1.G,A,Bos/Bison,30.1,3.3,0.6,15.4,0.1
+tooth1,tooth1.H,A,Bos/Bison,26.8,3.2,0.7,15.4,0.3
+tooth1,tooth1.I,A,Bos/Bison,23.7,3.1,0.6,16.0,0.1
+tooth1,tooth1.J,A,Bos/Bison,20.6,3.4,0.9,16.4,0.0
+tooth1,tooth1.K,A,Bos/Bison,17.2,3.0,0.9,16.8,0.2
+tooth1,tooth1.L,A,Bos/Bison,14.2,3.0,0.8,17.5,0.3
+tooth1,tooth1.M,A,Bos/Bison,11.2,3.5,0.7,17.7,0.1
+tooth1,tooth1.N,A,Bos/Bison,7.6,3.1,0.6,17.7,0.2
+tooth1,tooth1.O,A,Bos/Bison,4.5,2.8,0.8,16.6,0.4
+tooth1,tooth1.P,A,Bos/Bison,1.7,1.7,0.7,15.9,0.2
