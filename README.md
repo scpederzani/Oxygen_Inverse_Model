@@ -136,3 +136,5 @@ Check the sensitivity to reference vector oscillation (determined by `maxratio` 
 Run the last portion of the script to plot the result of the inverse model. The plot will display the original stable isotope data, the most likely model solution and model confidence interval as well as the reference vector. 
 
 The result is exported as `tooth1_passey_model_plot.png`
+
+![model plot](https://github.com/scpederzani/Oxygen_Inverse_Model/blob/main/output/tooth1_inverse_model_plot.png)
