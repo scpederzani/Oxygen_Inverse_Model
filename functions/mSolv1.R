@@ -167,12 +167,12 @@ PasseyInverse<-function(Length,dMeas,depth,la,lm,maxlength,minlength,mindepth,df
 
   MEST_df <- do.call(cbind, MEST)
   
-  solvout <- cbind(totallength, dMeasd, MEST_df)
+  solvout <- cbind(totallength, dMeasd, dMeas, MEST_df)
   
   ntrials=1:nsolxns
   tcols=paste("trial",ntrials,sep="")
   
-  colnames(solvout) = c("totallength", "dMeasd", tcols)
+  colnames(solvout) = c("totallength", "dMeasd","dMeas", tcols)
   solvout <<- as.data.frame(solvout)
   
 }
