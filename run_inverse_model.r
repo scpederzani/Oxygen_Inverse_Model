@@ -157,6 +157,8 @@ mSolvparams <- list(nsolxns = nsolxns, openindx = openindx, lm = lm, la = la, fi
 lfsolv <- PasseyInverse(Length = length,dMeas = dMeas,depth = depth,la = la,lm = lm, maxlength = maxlength, minlength = minlength, 
                       mindepth = mindepth, df = df, nsolxns = nsolxns, finit = finit, openindx = openindx, avelength = avelength, 
                       r1 = r1, r2 = 2, r3 = r3, maxratio = maxratio, minratio = minratio, stdev = stdev, numsam = numsam)
+beep(sound = 2)
+Sys.sleep(1)
 
 # plot some example solutions of mSolv
 # reference vector in black
@@ -164,7 +166,7 @@ lfsolv <- PasseyInverse(Length = length,dMeas = dMeas,depth = depth,la = la,lm =
 
 
 ggplot(solvout, aes(x = totallength, y = dMeasd))+
-  theme_classic()+
+  theme_bw()+
   geom_point(colour = "black")+
   geom_line(colour = "black")+
   geom_line(aes(x = totallength, y = dMeas), colour = "pink", lwd = 2)+
