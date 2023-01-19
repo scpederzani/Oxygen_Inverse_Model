@@ -3,6 +3,7 @@
 library("matrixcalc")
 library("dplyr")
 library("ggplot2")
+library("beepr")
 
 #### load functions from external script ####
 # working directory should be set to source file location
